@@ -1,6 +1,5 @@
 /* components/Songlist/index.js */
 import AudioPlayer from "@/components/AudioPlayer";
-import { gql, useQuery } from "@apollo/client";
 import Link from "next/link";
 import { Card, CardBody, CardText, CardTitle, Col, Row } from "reactstrap";
 

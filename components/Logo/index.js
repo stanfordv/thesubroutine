@@ -1,5 +1,3 @@
-/* components/logolist/index.js */
-import { gql, useQuery } from "@apollo/client";
 import { Card, CardBody, CardText, CardTitle, Col, Row } from "reactstrap";
 
 function Logo() {

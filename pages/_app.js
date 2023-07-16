@@ -26,4 +26,4 @@ class MyApp extends App {
     );
   }
 }
-export default withData({ ssr: true })(MyApp);
+export default MyApp;

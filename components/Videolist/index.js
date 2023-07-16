@@ -1,5 +1,4 @@
 /* components/videolist/index.js */
-import { gql, useQuery } from "@apollo/client";
 import {
   Card,
   CardBody,
