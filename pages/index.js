@@ -9,7 +9,7 @@ function Home() {
   return (
     <div className="container-fluid">
       <Songlist />
-      <img width="300px" src="/subroutinelogo_sm.gif" />
+
       <Videolist />
       <Logo />
     </div>

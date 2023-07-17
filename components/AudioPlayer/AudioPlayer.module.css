@@ -1,0 +1,63 @@
+.audio {
+    border: solid 1px;
+    padding: 2rem;
+    min-width: 500px;
+}
+
+.songList {
+    margin: 33px 0 0 30px;
+    border-top: dotted 1px white;
+    text-align: right;
+}
+
+.songListItem {
+    cursor: pointer;
+}
+
+.songListItem:hover {
+    border: solid 1px;
+}
+
+.audio img {
+    margin-top: -9px;
+    width: 300px;
+    height: auto;
+}
+
+.progressBar progress {
+    margin-top: -20px;
+    width: 320px;
+    color: green;
+}
+
+.container {
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    /* optional, aligns items vertically in the middle */
+    /* justify-content: space-between; */
+    /* optional, adds space between items */
+    flex-wrap: wrap;
+    /* optional, allows items to wrap to next line if space is not enough */
+}
+
+.controlbtns {
+    margin-top: 8px;
+    margin-left: 18px;
+    width: 20px;
+}
+
+.controlbtns .playbtn {
+    color: green;
+}
+
+.controlbtns .pausebtn {
+    color: white;
+}
+
+.displaytext {
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: 'Moirai One', 'Courier New', Courier, monospace;
+    color: white;
+}
