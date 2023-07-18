@@ -1,13 +1,49 @@
-.audio {
-    border: solid 1px;
-    padding: 2rem;
-    min-width: 500px;
+.audioplayer_container {
+    display: flex;
+    justify-content: center;
 }
 
-.songList {
-    margin: 33px 0 0 30px;
-    border-top: dotted 1px white;
-    text-align: right;
+.audio {
+    border: solid 3px #DA9100;
+    border-radius: 30px;
+    /* added this line */
+    padding: 2rem;
+    background-color: black;
+    min-width: 950px;
+    max-width: 950px;
+    box-shadow: 10px 10px 20px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subroutinebomb {
+    margin-top: -9px;
+    width: 300px;
+    height: auto;
+}
+
+.songlistcol {
+    min-width: 260px;
+    max-width: 260px;
+    /* min-width: 260px; */
+    /* border: solid white; */
+    /* max-width: 200px; */
+    /* text-align: right; */
+    /* border: solid white; */
+}
+
+.songlistheader {
+    height: 45px;
+    position: relative;
+    color: #DA9100;
+}
+
+.songlistheaderinner {
+    position: absolute;
+    bottom: 0;
+    /* right: 0; */
+}
+
+.songlist {
+    border-top: dotted 1px #FFFDD0;
 }
 
 .songListItem {
@@ -18,27 +54,32 @@
     border: solid 1px;
 }
 
-.audio img {
-    margin-top: -9px;
-    width: 300px;
+.playercol {
+    min-width: 330px
+}
+
+.imagecol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 260px;
+    /* border: solid grey 1px; */
+}
+
+.audio .songimage {
+    width: 220px;
     height: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border: solid 1px #FFFDD0;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(218, 145, 0, 0.5);
 }
 
-.progressBar progress {
-    margin-top: -20px;
-    width: 320px;
-    color: green;
-}
-
-.container {
-    margin-top: -20px;
+.playerheader {
     display: flex;
     align-items: center;
-    /* optional, aligns items vertically in the middle */
-    /* justify-content: space-between; */
-    /* optional, adds space between items */
-    flex-wrap: wrap;
-    /* optional, allows items to wrap to next line if space is not enough */
+    margin-bottom: -10px;
 }
 
 .controlbtns {
@@ -48,16 +89,22 @@
 }
 
 .controlbtns .playbtn {
-    color: green;
+    color: #568203;
 }
 
 .controlbtns .pausebtn {
-    color: white;
+    color: #FFFDD0;
 }
 
 .displaytext {
     margin-left: 10px;
     font-size: 30px;
     font-family: 'Moirai One', 'Courier New', Courier, monospace;
-    color: white;
+    color: #FFFDD0;
+}
+
+.progressBar progress {
+    /* margin-top: -20px; */
+    min-width: 300px;
+    color: #568203;
 }

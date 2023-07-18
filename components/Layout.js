@@ -7,7 +7,7 @@ import { Container, Nav, NavItem } from "reactstrap";
 export default function Layout(props) {
   const title = "Welcome to Nextjs";
   return (
-    <div>
+    <div style={{ height: "1000px", backgroundColor: "#4E3524" }}>
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
@@ -19,21 +19,27 @@ export default function Layout(props) {
           crossOrigin="anonymous"
         />
       </Head>
-      <header>
-        <Nav className="navbar navbar-dark bg-dark">
-          <NavItem>
-            <Link href="/">Home</Link>
-          </NavItem>
 
-          <NavItem className="ml-auto">
-            <Link href="/login">Sign In</Link>
-          </NavItem>
+      <Nav className="navbar" style={{ backgroundColor: "#568203" }}>
+        <NavItem>
+          <Link href="/" style={{ color: "#FFFED0" }}>
+            Home
+          </Link>
+        </NavItem>
 
-          <NavItem>
-            <Link href="/register">Sign Up</Link>
-          </NavItem>
-        </Nav>
-      </header>
+        <NavItem className="ml-auto">
+          <Link style={{ color: "#FFFED0" }} href="/login">
+            Sign In
+          </Link>
+        </NavItem>
+
+        <NavItem>
+          <Link style={{ color: "#FFFED0" }} href="/register">
+            Sign Up
+          </Link>
+        </NavItem>
+      </Nav>
+
       <Container>{props.children}</Container>
     </div>
   );

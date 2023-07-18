@@ -8,10 +8,9 @@ import Logo from "@/components/Logo";
 function Home() {
   return (
     <div className="container-fluid">
+      {/* <Logo /> */}
       <Songlist />
-
-      <Videolist />
-      <Logo />
+      {/* <Videolist /> */}
     </div>
   );
 }

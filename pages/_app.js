@@ -10,7 +10,7 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <div style={{ background: "black" }}>
+      <div style={{ "background-color": "#4E3524" }}>
         <Head>
           <link
             rel="stylesheet"

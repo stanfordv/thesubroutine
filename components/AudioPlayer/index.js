@@ -3,7 +3,11 @@ import styles from "./AudioPlayer.module.css";
 import { Col, Row } from "reactstrap";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPlay,
+  faPause,
+  faCirclePlay,
+} from "@fortawesome/free-solid-svg-icons";
 
 const AudioPlayer = ({ songs }) => {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
@@ -12,6 +16,7 @@ const AudioPlayer = ({ songs }) => {
   const [duration, setDuration] = useState(0);
 
   const audio = useRef(null);
+  let nowplaying_image = songs[currentTrackIndex].image;
 
   useEffect(() => {
     audio.current = new Audio(songs[0].source);
@@ -24,6 +29,23 @@ const AudioPlayer = ({ songs }) => {
       audio.current = null;
     };
   }, [songs]);
+
+  useEffect(() => {
+    const handleSpacebarPress = (event) => {
+      if (event.code === "Space") {
+        event.preventDefault(); // to prevent default action of space bar (scrolling down)
+        setIsPlaying(!isPlaying); // toggle play/pause
+        isPlaying ? pause() : play();
+      }
+    };
+
+    window.addEventListener("keydown", handleSpacebarPress);
+
+    return () => {
+      // Cleanup - remove the event listener when the component is unmounted
+      window.removeEventListener("keydown", handleSpacebarPress);
+    };
+  }, [isPlaying]); // depends on the isPlaying state
 
   const updateProgress = () => {
     setCurrentTime(audio.current.currentTime);
@@ -48,34 +70,73 @@ const AudioPlayer = ({ songs }) => {
     audio.current.pause();
     setIsPlaying(false);
   };
-
+  console.log("current_image", nowplaying_image);
   return (
     <Row className={styles.audio}>
-      <Col>
-        <div className={styles.container}>
+      <Col className={styles.playercol}>
+        <div className={styles.playerheader}>
           <Controls isPlaying={isPlaying} play={play} pause={pause} />
           <div className={styles.displaytext}>
             <DisplayTrack track={songs[currentTrackIndex]} />{" "}
           </div>
-          <ProgressBar currentTime={currentTime} duration={duration} />
         </div>
+        <ProgressBar currentTime={currentTime} duration={duration} />
+        {isPlaying && (
+          <Image
+            className={styles.subroutinebomb}
+            src="/subroutinelogo_sm.gif" // Source path
+            alt="Subroutine logo" // Good to provide alt text for accessibility
+            width={150} // Width of the image
+            height={80} // You need to provide a height value for Next.js Image component
+          />
+        )}
+        {!isPlaying && (
+          <Image
+            className={styles.subroutinebomb}
+            src="/subroutinelogo_sm_still.gif" // Source path
+            alt="Subroutine logo" // Good to provide alt text for accessibility
+            width={150} // Width of the image
+            height={80} // You need to provide a height value for Next.js Image component
+          />
+        )}
+      </Col>
+      <Col className={styles.songlistcol}>
+        <div className={styles.songlistheader}>
+          <div className={styles.songlistheaderinner}>Songlist</div>
+        </div>
+        <div className={styles.songlist}>
+          {songs.map((song, index) => {
+            let iscurr = currentTrackIndex === index;
+            return (
+              <div
+                className={styles.songListItem}
+                key={index}
+                onClick={() => changeTrack(index)}
+              >
+                {iscurr && (
+                  <FontAwesomeIcon
+                    icon={faCirclePlay}
+                    style={{ color: "#DA9100" }}
+                  />
+                )}
+                &nbsp;
+                <span style={{ color: iscurr ? "#FFFDD0" : "#568203" }}>
+                  {song.name}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </Col>
+
+      <Col className={styles.imagecol}>
         <Image
-          src="/subroutinelogo_sm.gif" // Source path
+          className={styles.songimage}
+          src={nowplaying_image} // Source path
           alt="Subroutine logo" // Good to provide alt text for accessibility
           width={150} // Width of the image
           height={80} // You need to provide a height value for Next.js Image component
         />
-      </Col>
-      <Col className={styles.songList}>
-        {songs.map((song, index) => (
-          <div
-            className={styles.songListItem}
-            key={index}
-            onClick={() => changeTrack(index)}
-          >
-            <span>{song.name}</span>
-          </div>
-        ))}
       </Col>
     </Row>
   );
