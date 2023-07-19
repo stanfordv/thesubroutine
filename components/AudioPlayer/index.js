@@ -70,9 +70,37 @@ const AudioPlayer = ({ songs }) => {
     audio.current.pause();
     setIsPlaying(false);
   };
-  console.log("current_image", nowplaying_image);
+
   return (
     <Row className={styles.audio}>
+      <Col className={styles.songlistcol}>
+        <div className={styles.songlistheader}>
+          <div className={styles.songlistheaderinner}>Songs</div>
+        </div>
+        <div className={styles.songlist}>
+          {songs.map((song, index) => {
+            let iscurr = currentTrackIndex === index;
+            return (
+              <div
+                className={styles.songListItem}
+                key={index}
+                onClick={() => changeTrack(index)}
+              >
+                {iscurr && (
+                  <FontAwesomeIcon
+                    icon={faCirclePlay}
+                    style={{ color: "#DA9100", height: "12px" }}
+                  />
+                )}
+                &nbsp;
+                <span style={{ color: iscurr ? "#FFFDD0" : "#568203" }}>
+                  {song.name}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </Col>
       <Col className={styles.playercol}>
         <div className={styles.playerheader}>
           <Controls isPlaying={isPlaying} play={play} pause={pause} />
@@ -99,34 +127,6 @@ const AudioPlayer = ({ songs }) => {
             height={80} // You need to provide a height value for Next.js Image component
           />
         )}
-      </Col>
-      <Col className={styles.songlistcol}>
-        <div className={styles.songlistheader}>
-          <div className={styles.songlistheaderinner}>Songlist</div>
-        </div>
-        <div className={styles.songlist}>
-          {songs.map((song, index) => {
-            let iscurr = currentTrackIndex === index;
-            return (
-              <div
-                className={styles.songListItem}
-                key={index}
-                onClick={() => changeTrack(index)}
-              >
-                {iscurr && (
-                  <FontAwesomeIcon
-                    icon={faCirclePlay}
-                    style={{ color: "#DA9100" }}
-                  />
-                )}
-                &nbsp;
-                <span style={{ color: iscurr ? "#FFFDD0" : "#568203" }}>
-                  {song.name}
-                </span>
-              </div>
-            );
-          })}
-        </div>
       </Col>
 
       <Col className={styles.imagecol}>

@@ -1,0 +1,24 @@
+    .logodesign {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 300px;
+        height: auto;
+    }
+    
+    .navbar {
+        background-color: "#568203"
+    }
+    
+    .navcontainer {
+        display: flex;
+        justify-content: flex-start;
+        margin-right: 5%;
+    }
+    
+    .navitem {
+        margin: 10px;
+    }

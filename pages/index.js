@@ -1,5 +1,5 @@
 /* /pages/index.js */
-import Videolist from "@/components/Videolist";
+import Videolist from "@/components/VideoPlayer";
 import React, { useState } from "react";
 import { Col, Row } from "reactstrap";
 import Songlist from "@/components/Songlist";

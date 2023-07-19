@@ -1,6 +1,7 @@
 .audioplayer_container {
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
 }
 
 .audio {
@@ -9,8 +10,9 @@
     /* added this line */
     padding: 2rem;
     background-color: black;
-    min-width: 950px;
-    max-width: 950px;
+    min-width: 880px;
+    max-width: 880px;
+    height: auto;
     box-shadow: 10px 10px 20px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -21,8 +23,8 @@
 }
 
 .songlistcol {
-    min-width: 260px;
-    max-width: 260px;
+    min-width: 220px;
+    max-width: 220px;
     /* min-width: 260px; */
     /* border: solid white; */
     /* max-width: 200px; */
@@ -37,6 +39,8 @@
 }
 
 .songlistheaderinner {
+    font-size: large;
+    font-weight: bold;
     position: absolute;
     bottom: 0;
     /* right: 0; */
@@ -60,14 +64,14 @@
 
 .imagecol {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 260px;
+    /* justify-content: center;
+    align-items: center; */
+    /* min-width: 220px; */
     /* border: solid grey 1px; */
 }
 
 .audio .songimage {
-    width: 220px;
+    width: 230px;
     height: auto;
     margin-top: 25px;
     margin-bottom: 20px;

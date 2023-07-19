@@ -5,6 +5,11 @@ import { Row } from "reactstrap";
 function Songlist() {
   const songs = [
     {
+      name: "The Machine ",
+      source: "/songs/themachine.mp3",
+      image: "/songs/themachine.jpg",
+    },
+    {
       name: "Without a sound",
       source: "/songs/withoutasound.mp3",
       image: "/songs/withoutasound.jpg",
@@ -14,11 +19,7 @@ function Songlist() {
       source: "/songs/whatiknow.mp3",
       image: "/songs/whatiknow.jpg",
     },
-    {
-      name: "The Machine ",
-      source: "/songs/themachine.mp3",
-      image: "/songs/themachine.jpg",
-    },
+
     {
       name: "Busted ",
       source: "/songs/busted.mp3",
