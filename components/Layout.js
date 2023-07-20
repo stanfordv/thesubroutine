@@ -9,12 +9,7 @@ import Image from "next/image";
 export default function Layout(props) {
   const title = "Introducing the Subroutine";
   return (
-    <div
-      style={{
-        height: "1000px",
-        backgroundColor: "#4E3524",
-      }}
-    >
+    <div className={styles.fundamentals}>
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
@@ -27,17 +22,7 @@ export default function Layout(props) {
         /> */}
       </Head>
 
-      <Nav
-        className={"navbar"}
-        style={{
-          padding: 0,
-          height: "50px",
-          backgroundColor: "#568203",
-          borderBottom: "solid 2px",
-
-          boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.2)",
-        }}
-      >
+      <Nav className={styles.topbanner + " navbar"}>
         <NavItem>
           <Link style={{ color: "#FFFED0" }} href="/">
             <Image
@@ -51,12 +36,12 @@ export default function Layout(props) {
         </NavItem>
         <div className={styles.navcontainer}>
           <NavItem className={styles.navitem}>
-            <Link style={{ color: "#FFFED0" }} href="/about">
+            <Link href="/about">
               <div> About</div>
             </Link>
           </NavItem>
           <NavItem className={styles.navitem}>
-            <Link href="/videos" style={{ color: "#FFFED0" }}>
+            <Link href="/videos">
               <div> Videos</div>
             </Link>
           </NavItem>

@@ -3,14 +3,14 @@ import App from "next/app";
 import Head from "next/head";
 import React from "react";
 
-import Layout from "../components/Layout";
-import withData from "../lib/apollo";
+import Layout from "@/components/Layout";
+import "@/styles/globals.css";
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <div style={{ "background-color": "#4E3524" }}>
+      <div>
         <Head>
           <link
             rel="stylesheet"

@@ -82,20 +82,20 @@ const AudioPlayer = ({ songs }) => {
             let iscurr = currentTrackIndex === index;
             return (
               <div
-                className={styles.songListItem}
+                className={
+                  iscurr ? styles.songListItemSelected : styles.songListItem
+                }
                 key={index}
                 onClick={() => changeTrack(index)}
               >
                 {iscurr && (
                   <FontAwesomeIcon
+                    className={styles.circleplay}
                     icon={faCirclePlay}
-                    style={{ color: "#DA9100", height: "12px" }}
                   />
                 )}
                 &nbsp;
-                <span style={{ color: iscurr ? "#FFFDD0" : "#568203" }}>
-                  {song.name}
-                </span>
+                <span>{song.name}</span>
               </div>
             );
           })}

@@ -1,12 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+    --color-dark: #000000;
+    /* Black */
+    --color-light: #EDC9AF;
+    /* Desert Sand */
+    --color-uppermiddle: #4B5320;
+    /* Army Green */
+    --color-bluegrey: #708090;
+    /* Slate Gray */
+    --color-dustyorange: #8A795D;
+    /* Copper */
+    --color-darkgrey: #252525;
 }
 
+
+/* 
 @media (prefers-color-scheme: dark) {
      :root {
         --foreground-rgb: 255, 255, 255;
@@ -18,4 +25,4 @@
 body {
     color: rgb(var(--foreground-rgb));
     background: linear-gradient( to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-}
+} */

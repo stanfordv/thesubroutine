@@ -1,3 +1,16 @@
+    .fundamentals {
+        height: 1000px;
+        background-color: var( --color-darkgrey);
+    }
+    
+    .topbanner {
+        padding: 0;
+        height: 50px;
+        background-color: var(--color-bluegrey);
+        border-bottom: solid 2px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+    
     .logodesign {
         position: absolute;
         top: 0;
@@ -9,10 +22,6 @@
         height: auto;
     }
     
-    .navbar {
-        background-color: "#568203"
-    }
-    
     .navcontainer {
         display: flex;
         justify-content: flex-start;
@@ -21,4 +30,8 @@
     
     .navitem {
         margin: 10px;
+    }
+    
+    .navitem div {
+        color: var(--color-light)
     }

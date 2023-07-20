@@ -5,11 +5,11 @@
 }
 
 .audio {
-    border: solid 3px #DA9100;
+    border: solid 3px var(--color-bluegrey);
     border-radius: 30px;
     /* added this line */
     padding: 2rem;
-    background-color: black;
+    background-color: var(--color-dark);
     min-width: 880px;
     max-width: 880px;
     height: auto;
@@ -35,7 +35,7 @@
 .songlistheader {
     height: 45px;
     position: relative;
-    color: #DA9100;
+    color: var(--color-bluegrey);
 }
 
 .songlistheaderinner {
@@ -47,11 +47,17 @@
 }
 
 .songlist {
-    border-top: dotted 1px #FFFDD0;
+    border-top: dotted 1px var(--color-light);
 }
 
-.songListItem {
+.songListItem span {
     cursor: pointer;
+    color: var(--color-darkgrey);
+}
+
+.songListItemSelected span {
+    cursor: pointer;
+    color: var(--color-light);
 }
 
 .songListItem:hover {
@@ -75,7 +81,7 @@
     height: auto;
     margin-top: 25px;
     margin-bottom: 20px;
-    border: solid 1px #FFFDD0;
+    border: solid 1px var(--color-light);
     border-radius: 5px;
     box-shadow: 5px 5px 5px rgba(218, 145, 0, 0.5);
 }
@@ -93,22 +99,27 @@
 }
 
 .controlbtns .playbtn {
-    color: #568203;
+    color: var(--color-uppermiddle);
+}
+
+.circleplay {
+    color: var(--color-uppermiddle);
+    height: 12px;
 }
 
 .controlbtns .pausebtn {
-    color: #FFFDD0;
+    color: var(--color-light);
 }
 
 .displaytext {
     margin-left: 10px;
     font-size: 30px;
     font-family: 'Moirai One', 'Courier New', Courier, monospace;
-    color: #FFFDD0;
+    color: var(--color-light);
 }
 
 .progressBar progress {
     /* margin-top: -20px; */
     min-width: 300px;
-    color: #568203;
+    color: var(--color-uppermiddle);
 }
