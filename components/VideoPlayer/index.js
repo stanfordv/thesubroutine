@@ -1,48 +1,31 @@
-/* components/videolist/index.js */
-import {
-  Card,
-  CardBody,
-  CardText,
-  CardImg,
-  CardTitle,
-  Col,
-  Row,
-} from "reactstrap";
+import { Card, CardBody, CardImg, CardTitle, CardText } from "reactstrap";
 import styles from "@/components/VideoPlayer/videoplayer.module.css";
 
 import Link from "next/link";
+import Image from "next/image";
 
-function VideoPlayer() {
+function VideoPlayer({ videos }) {
   return (
     <div className={styles.videoplayercontainer}>
-      <Link href="https://youtu.be/TjZsLNdLNTk">
-        <img
-          width="250px"
-          src="/videos/crittercamslink.png"
-          alt="crittercams image"
-        />
-      </Link>
-      &nbsp;
-      <Link href="https://www.youtube.com/watch?v=-7Ul4D3Rw78">
-        <img width="250px" src="/videos/machinethumb.png" alt="machine image" />
-      </Link>
-      &nbsp;
-      <Link href="https://www.youtube.com/watch?v=Sq5ZtXGA2pE">
-        <img
-          width="250px"
-          src="/videos/withoutasoundyoutubethumb.png"
-          alt="withoutasound image"
-        />
-      </Link>
-      &nbsp;
-      <Link href="https://www.youtube.com/watch?v=KHSBaBe5X5g">
-        <img
-          width="250px"
-          src="/videos/swayyoutubethumb.png"
-          alt="sway image"
-        />
-      </Link>
+      {videos.map((video, index) => (
+        <div className={styles.video_container} key={index}>
+          <div className={styles.video_title}>{video.name}</div>
+          <Link href={video.source} target="_blank">
+            <Image
+              className={styles.video_img}
+              src={video.image}
+              alt={video.name}
+              width={250}
+              height={140}
+            />
+          </Link>
+          <div className={styles.video_body}>
+            <div className={styles.video_text}>{video.description}</div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
+
 export default VideoPlayer;

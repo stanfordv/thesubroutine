@@ -105,6 +105,7 @@
 .circleplay {
     color: var(--color-uppermiddle);
     height: 12px;
+    margin-bottom: 2px;
 }
 
 .controlbtns .pausebtn {
