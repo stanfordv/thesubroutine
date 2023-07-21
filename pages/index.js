@@ -7,7 +7,7 @@ import Logo from "@/components/Logo";
 
 function Home() {
   return (
-    <div className="container-fluid">
+    <div>
       {/* <Logo /> */}
       <Songlist />
       {/* <Videolist /> */}

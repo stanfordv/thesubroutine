@@ -8,7 +8,8 @@ export default () => {
       name: "Critter Cams",
       source: "https://youtu.be/TjZsLNdLNTk",
       image: "/videos/crittercamslink.png",
-      description: "When the punks nuke Washington DC....",
+      description:
+        " When the punks nuke Washington DC When the punks nuke Washington DC When the punks nuke Washington DC....",
     },
     {
       name: "The Machine",

@@ -24,7 +24,7 @@ export default function Layout(props) {
 
       <Nav className={styles.topbanner + " navbar"}>
         <NavItem>
-          <Link style={{ color: "#FFFED0" }} href="/">
+          <Link href="/">
             <Image
               className={styles.logodesign}
               src="/logo3.png"
@@ -36,13 +36,18 @@ export default function Layout(props) {
         </NavItem>
         <div className={styles.navcontainer}>
           <NavItem className={styles.navitem}>
-            <Link href="/about">
-              <div> About</div>
+            <Link href="/audio">
+              <div>Songs</div>
             </Link>
           </NavItem>
           <NavItem className={styles.navitem}>
             <Link href="/videos">
               <div> Videos</div>
+            </Link>
+          </NavItem>
+          <NavItem className={styles.navitem}>
+            <Link href="/about">
+              <div> About</div>
             </Link>
           </NavItem>
         </div>

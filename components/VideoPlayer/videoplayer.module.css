@@ -1,20 +1,30 @@
     .videoplayercontainer {
-        /* display: flex; */
-        margin-top: 2rem;
-        justify-content: center;
-        /* Aligns the container's items on the horizontal line(center in row direction) */
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        margin: 3rem auto;
     }
     
     .video_container {
-        background-color: var(--color-dark);
-        border: solid 2px var(--color-dustyorange);
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--color-uppermiddle);
+        border: solid 2px var(--color-dark);
         border-radius: 8px;
         box-shadow: 8px 8px 8px 3px rgba(0, 0, 0, 0.2);
-        margin: 16px;
-        padding: 16px;
-        width: 288px;
-        height: 400px;
+        padding: 12px 25px 25px 25px;
+        width: 650px;
+        margin-bottom: 30px;
+    }
+    
+    .video_left {
+        width: 50%;
+    }
+    
+    .video_right {
+        margin-top: 30px;
+        width: 50%;
     }
     
     .video_title {
