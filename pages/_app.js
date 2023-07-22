@@ -5,12 +5,13 @@ import React from "react";
 
 import Layout from "@/components/Layout";
 import "@/styles/globals.css";
+import styles from "@/components/layout.module.css";
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <div>
+      <div className={styles.fundamentals}>
         <Head>
           <link
             rel="stylesheet"

@@ -2,14 +2,14 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { Container, Nav, NavItem } from "reactstrap";
+import { Col, Container, Nav, NavItem, Row } from "reactstrap";
 import styles from "@/components/layout.module.css";
 import Image from "next/image";
 
 export default function Layout(props) {
   const title = "Introducing the Subroutine";
   return (
-    <div className={styles.fundamentals}>
+    <div>
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
@@ -23,34 +23,44 @@ export default function Layout(props) {
       </Head>
 
       <Nav className={styles.topbanner + " navbar"}>
-        <NavItem>
-          <Link href="/">
-            <Image
-              className={styles.logodesign}
-              src="/logo3.png"
-              alt="Subroutine logo" // Good to provide alt text for accessibility
-              width={600} // Width of the image
-              height={70} // You need to provide a height value for Next.js Image component
-            />
-          </Link>
-        </NavItem>
-        <div className={styles.navcontainer}>
-          <NavItem className={styles.navitem}>
-            <Link href="/audio">
-              <div>Songs</div>
-            </Link>
-          </NavItem>
-          <NavItem className={styles.navitem}>
-            <Link href="/videos">
-              <div> Videos</div>
-            </Link>
-          </NavItem>
-          <NavItem className={styles.navitem}>
-            <Link href="/about">
-              <div> About</div>
-            </Link>
-          </NavItem>
-        </div>
+        <Row className={styles.logocontainer}>
+          <Col>
+            <NavItem>
+              <Link href="/">
+                <Image
+                  className={styles.logodesign}
+                  src="/logo3.png"
+                  alt="Subroutine logo" // Good to provide alt text for accessibility
+                  width={600} // Width of the image
+                  height={70} // You need to provide a height value for Next.js Image component
+                />
+              </Link>
+            </NavItem>
+          </Col>
+        </Row>
+        <Row className={styles.navcontainer}>
+          <Col>
+            <NavItem className={styles.navitem}>
+              <Link href="/audio">
+                <div>Songs</div>
+              </Link>
+            </NavItem>
+          </Col>
+          <Col>
+            <NavItem className={styles.navitem}>
+              <Link href="/videos">
+                <div> Videos</div>
+              </Link>
+            </NavItem>
+          </Col>
+          <Col>
+            <NavItem className={styles.navitem}>
+              <Link href="/about">
+                <div> About</div>
+              </Link>
+            </NavItem>
+          </Col>
+        </Row>
       </Nav>
 
       <Container>{props.children}</Container>

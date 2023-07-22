@@ -1,43 +1,95 @@
-        .fundamentals {
-            background-color: var( --color-darkgrey);
-            height: 1400px;
-        }
-        
-        .linkstyle {
-            color: var(--color-dark)
-        }
-        
-        .topbanner {
-            padding: 0;
-            height: 50px;
-            background-color: var(--color-bluegrey);
+    .fundamentals {
+        background-color: var( --color-darkgrey);
+        height: 100%;
+    }
+    
+    .linkstyle {
+        color: var(--color-dark)
+    }
+    
+    .topbanner {
+        padding: 0;
+        height: 80px;
+        /* background-color: var(--color-uppermiddle);
             border-bottom: solid 2px;
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); */
+    }
+    
+    .logocontainer {
+        width: 100%;
+        position: relative;
+    }
+    
+    .logodesign {
+        position: absolute;
+        top: 0;
+        bottom: 10;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 300px;
+        height: auto;
+        background-color: var(--color-bluegrey);
+        padding: 4px;
+        border: solid 1px var(--color-dark);
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .navcontainer {
+        display: flex;
+        height: 20px;
+        justify-content: center;
+        /* background-color: var(--color-bluegrey); */
+        margin-top: 25px;
+        width: 100%;
+    }
+    
+    .navitem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
+    
+    .navitem div {
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-bluegrey);
+        color: var(--color-dark);
+        font-family: 'Special Elite', 'Courier New', Courier, monospace;
+        border-radius: 5px;
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+        padding: 3px 0 0 0;
+        width: 100px;
+    }
+    
+    .navitem a {
+        text-decoration: none !important;
+    }
+    
+    .navitem a:hover {
+        text-decoration: none !important;
+    }
+    
+    .navitem div:hover,
+    .navitem div:active {
+        color: var(--color-light);
+        box-shadow: none;
+    }
+    
+    @media only screen and (min-device-width: 200px) and (max-device-width: 844px) and (-webkit-min-device-pixel-ratio: 2) {
+        .logocontainer {
+            width: 98%;
+            margin-left: 2%;
+            position: relative;
         }
-        
-        .logodesign {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 300px;
-            height: auto;
-        }
-        
         .navcontainer {
-            display: flex;
-            justify-content: flex-start;
-            margin-right: 5%;
+            width: 98%;
+            margin-left: 2%;
         }
-        
-        .navitem {
-            margin: 10px;
-        }
-        
         .navitem div {
-            margin-top: 7px;
-            color: var(--color-dark);
-            font-family: 'Special Elite', 'Courier New', Courier, monospace;
+            width: 60px;
         }
+        .fundamentals {}
+    }

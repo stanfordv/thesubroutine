@@ -24,6 +24,7 @@
 }
 
 .songlistcol {
+    order: 1;
     min-width: 220px;
     max-width: 220px;
     /* min-width: 260px; */
@@ -67,10 +68,12 @@
 }
 
 .playercol {
+    order: 2;
     min-width: 330px
 }
 
 .imagecol {
+    order: 3;
     display: flex;
     /* justify-content: center;
     align-items: center; */
@@ -125,4 +128,49 @@
     /* margin-top: -20px; */
     min-width: 300px;
     color: var(--color-uppermiddle);
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 844px) and (-webkit-min-device-pixel-ratio: 2) {
+    .audioplayer_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+    }
+    .audio {
+        min-width: 360px;
+        max-width: 360px;
+    }
+    .subroutinebomb {
+        width: 100px;
+        margin-left: 20%;
+    }
+    .songlistcol {
+        order: 2;
+        min-width: 220px;
+        max-width: 220px;
+    }
+    .songlistheaderinner {
+        font-size: medium;
+    }
+    .playercol {
+        order: 1;
+    }
+    .imagecol {
+        order: 3;
+    }
+    .audio .songimage {
+        width: 280px;
+    }
+    .controlbtns {
+        margin: 8px 0 10px 18px;
+        width: 20px;
+    }
+    .displaytext {
+        margin: 0 0 5px 5px;
+        font-size: 22px;
+    }
+    .progressBar progress {
+        min-width: 270px;
+    }
 }

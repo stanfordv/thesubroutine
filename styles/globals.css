@@ -1,15 +1,17 @@
 :root {
     --color-dark: #000000;
     /* Black */
-    --color-light: #EDC9AF;
+    --color-light: #BDB76B;
     /* Desert Sand */
-    --color-uppermiddle: #4B5320;
+    --color-uppermiddle: #002147;
     /* Army Green */
-    --color-bluegrey: #708090;
+    --color-bluegrey: #6A994E;
     /* Slate Gray */
-    --color-dustyorange: #8A795D;
+    --color-dustyorange: #CB4154;
     /* Copper */
-    --color-darkgrey: #2C3539;
+    --color-darkgrey: #35281E;
+    height: 100vh;
+    background-color: var( --color-darkgrey);
 }
 
 @font-face {
