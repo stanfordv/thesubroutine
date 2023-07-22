@@ -104,17 +104,17 @@
 }
 
 .controlbtns .playbtn {
-    color: var(--color-uppermiddle);
+    color: var(--color-bluegrey);
 }
 
 .circleplay {
-    color: var(--color-uppermiddle);
+    color: var(--color-bluegrey);
     height: 12px;
     margin-bottom: 2px;
 }
 
 .controlbtns .pausebtn {
-    color: var(--color-light);
+    color: var(--color-dustyorange);
 }
 
 .displaytext {
@@ -163,12 +163,15 @@
         width: 280px;
     }
     .controlbtns {
-        margin: 8px 0 10px 18px;
+        margin-top: 8px;
+        margin-left: 18px;
         width: 20px;
     }
     .displaytext {
         margin: 0 0 5px 5px;
         font-size: 22px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
     }
     .progressBar progress {
         min-width: 270px;

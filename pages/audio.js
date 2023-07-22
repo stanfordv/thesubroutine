@@ -1,6 +1,6 @@
 /* /pages/index.js */
 
-import React, { useState } from "react";
+import React from "react";
 
 import Songlist from "@/components/Songlist";
 
