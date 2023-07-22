@@ -4,6 +4,12 @@ import styles from "@/components/AudioPlayer/AudioPlayer.module.css";
 function Songlist() {
   const songs = [
     {
+      name: "Latest mix",
+      source:
+        "https://storage.googleapis.com/subroutinesongs/latest/sketch.mp3",
+      image: "/songs/latestsketch.png",
+    },
+    {
       name: "The Machine ",
       source: "https://storage.googleapis.com/subroutinesongs/themachine.mp3",
       image: "/songs/themachine.jpg",
