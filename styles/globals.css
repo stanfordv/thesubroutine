@@ -12,6 +12,20 @@
     --color-darkgrey: #2C3539;
 }
 
+@font-face {
+    font-family: 'Special Elite';
+    src: url('/fonts/SpecialElite-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moirai One';
+    src: url('/fonts/MoiraiOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* 
 @media (prefers-color-scheme: dark) {
