@@ -11,12 +11,14 @@ import {
   faBackward,
   faForward,
 } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/router";
 
 const AudioPlayer = ({ songs }) => {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const router = useRouter();
 
   const audio = useRef(null);
   let nowplaying_image = songs[currentTrackIndex].image;
@@ -33,6 +35,22 @@ const AudioPlayer = ({ songs }) => {
       audio.current = null;
     };
   }, [songs]);
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      if (audio.current) {
+        audio.current.pause();
+        audio.current.src = "";
+      }
+    };
+
+    router.events.on("routeChangeStart", handleRouteChange);
+
+    // Cleanup function:
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, [router]);
 
   useEffect(() => {
     const handleSpacebarPress = (event) => {
@@ -60,6 +78,11 @@ const AudioPlayer = ({ songs }) => {
   };
 
   const changeTrack = (index) => {
+    // Before changing the source, pause the current audio and clear the source
+    audio.current.pause();
+    audio.current.src = "";
+
+    // Then set the new source and start playing
     audio.current.src = songs[index].source;
     setCurrentTrackIndex(index);
     play();
