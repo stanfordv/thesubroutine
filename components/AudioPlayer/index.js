@@ -2,11 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./AudioPlayer.module.css";
 import { Col, Row } from "reactstrap";
 import Image from "next/image";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
   faPause,
   faCirclePlay,
+  faBackward,
+  faForward,
 } from "@fortawesome/free-solid-svg-icons";
 
 const AudioPlayer = ({ songs }) => {
@@ -17,7 +20,8 @@ const AudioPlayer = ({ songs }) => {
 
   const audio = useRef(null);
   let nowplaying_image = songs[currentTrackIndex].image;
-
+  let nowplaying_link = songs[currentTrackIndex].link;
+  let nowplaying_name = songs[currentTrackIndex].name;
   useEffect(() => {
     audio.current = new Audio(songs[0].source);
     audio.current.addEventListener("timeupdate", updateProgress);
@@ -71,6 +75,14 @@ const AudioPlayer = ({ songs }) => {
     setIsPlaying(false);
   };
 
+  const fastForward = () => {
+    audio.current.currentTime += 10; // Moves forward by 10 seconds. You can adjust this value as needed.
+  };
+
+  const rewind = () => {
+    audio.current.currentTime -= 10; // Moves backward by 10 seconds. You can adjust this value as needed.
+  };
+
   return (
     <Row className={styles.audio}>
       <Col className={styles.songlistcol}>
@@ -103,12 +115,23 @@ const AudioPlayer = ({ songs }) => {
       </Col>
       <Col className={styles.playercol}>
         <div className={styles.playerheader}>
-          <Controls isPlaying={isPlaying} play={play} pause={pause} />
+          <Controls
+            isPlaying={isPlaying}
+            play={play}
+            pause={pause}
+            fastForward={fastForward}
+            rewind={rewind}
+          />
           <div className={styles.displaytext}>
             <DisplayTrack track={songs[currentTrackIndex]} />{" "}
           </div>
         </div>
-        <ProgressBar currentTime={currentTime} duration={duration} />
+        <ProgressBar
+          currentTime={currentTime}
+          duration={duration}
+          fastForward={fastForward}
+          rewind={rewind}
+        />
         {isPlaying && (
           <Image
             className={styles.subroutinebomb}
@@ -137,6 +160,13 @@ const AudioPlayer = ({ songs }) => {
           width={150} // Width of the image
           height={80} // You need to provide a height value for Next.js Image component
         />
+        {nowplaying_link && (
+          <Link href={nowplaying_link} target="blank">
+            <div className={styles.spotifylink}>
+              Listen to &nbsp;<em> {nowplaying_name} </em>&nbsp; on Spotify
+            </div>
+          </Link>
+        )}
       </Col>
     </Row>
   );
@@ -144,9 +174,17 @@ const AudioPlayer = ({ songs }) => {
 
 const DisplayTrack = ({ track }) => <div>{track.name}</div>;
 
-const ProgressBar = ({ currentTime, duration }) => (
+const ProgressBar = ({ currentTime, duration, fastForward, rewind }) => (
   <div className={styles.progressBar}>
     <progress value={currentTime} max={duration}></progress>
+    <div className={styles.ffrewind}>
+      <div className={styles.rewindbtn} onClick={rewind}>
+        <FontAwesomeIcon icon={faBackward} />
+      </div>
+      <div className={styles.fastForwardbtn} onClick={fastForward}>
+        <FontAwesomeIcon icon={faForward} />
+      </div>
+    </div>
   </div>
 );
 

@@ -15,23 +15,21 @@
     min-width: 880px;
     max-width: 880px;
     box-shadow: 10px 10px 20px 4px rgba(0, 0, 0, 0.2);
+    background: var(--color-uppermiddle);
 }
 
 .subroutinebomb {
     margin-top: -9px;
-    width: 300px;
+    width: 250px;
     height: auto;
+    margin-left: 25px;
 }
 
 .songlistcol {
     order: 1;
     min-width: 220px;
-    max-width: 220px;
-    /* min-width: 260px; */
-    /* border: solid white; */
-    /* max-width: 200px; */
-    /* text-align: right; */
-    /* border: solid white; */
+    max-width: 400px;
+    margin-top: -18px;
 }
 
 .songlistheader {
@@ -55,7 +53,8 @@
 
 .songListItem span {
     cursor: pointer;
-    color: var(--color-darkgrey);
+    color: var(--color-bluegrey);
+    opacity: 0.7;
 }
 
 .songListItemSelected span {
@@ -69,16 +68,21 @@
 
 .playercol {
     order: 2;
-    min-width: 330px
+    padding-top: 40px;
+    min-width: 330px;
+    width: 400px;
+    background: var(--color-dark);
+    border-radius: 7px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), /* Bottom right shadow */
+    -3px -3px 10px rgba(255, 255, 255, 1), /* Top left shadow */
+    -3px 3px 10px rgba(0, 0, 0, 0.5), /* Bottom left shadow */
+    3px -3px 10px rgba(255, 255, 255, 0.5);
+    /* Top right shadow */
 }
 
 .imagecol {
     order: 3;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    /* min-width: 220px; */
-    /* border: solid grey 1px; */
+    display: block;
 }
 
 .audio .songimage {
@@ -98,13 +102,14 @@
 }
 
 .controlbtns {
-    margin-top: 8px;
-    margin-left: 18px;
-    width: 20px;
+    margin-top: 10px;
+    color: var(--color-bluegrey);
 }
 
-.controlbtns .playbtn {
-    color: var(--color-bluegrey);
+.controlbtns .playbtn svg,
+.controlbtns .pausebtn svg {
+    width: 24px;
+    height: 24px;
 }
 
 .circleplay {
@@ -125,9 +130,43 @@
 }
 
 .progressBar progress {
-    /* margin-top: -20px; */
     min-width: 300px;
     color: var(--color-uppermiddle);
+}
+
+.ffrewind {
+    position: relative;
+    width: 300px;
+}
+
+.rewindbtn,
+.fastForwardbtn {
+    position: absolute;
+    z-index: 10;
+    color: var(--color-light);
+    cursor: pointer;
+}
+
+.rewindbtn {
+    left: 0;
+    margin-top: -10px;
+}
+
+.fastForwardbtn {
+    right: 0;
+    margin-top: -10px;
+}
+
+.spotifylink {
+    color: var(--color-light);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spotifylink em {
+    text-decoration: underline;
 }
 
 @media only screen and (min-device-width: 200px) and (max-device-width: 844px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -142,7 +181,7 @@
         max-width: 360px;
     }
     .subroutinebomb {
-        width: 100px;
+        width: 140px;
         margin-left: 20%;
     }
     .songlistcol {
@@ -155,6 +194,10 @@
     }
     .playercol {
         order: 1;
+        height: 200px;
+        margin-left: -20px;
+        margin-bottom: 20px;
+        padding-left: 30px;
     }
     .imagecol {
         order: 3;
@@ -163,9 +206,9 @@
         width: 280px;
     }
     .controlbtns {
-        margin-top: -5px;
-        margin-left: 18px;
+        margin-top: -2px;
         width: 20px;
+        margin-right: 5px;
     }
     .displaytext {
         margin: 0 0 5px 5px;
@@ -175,5 +218,12 @@
     }
     .progressBar progress {
         min-width: 270px;
+    }
+    .ffrewind {
+        position: relative;
+        width: 270px;
+    }
+    .spotifylink {
+        font-size: 14px;
     }
 }

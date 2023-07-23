@@ -19,11 +19,13 @@ function Songlist() {
       source:
         "https://storage.googleapis.com/subroutinesongs/withoutasound.mp3",
       image: "/songs/withoutasound.jpg",
+      link: "https://open.spotify.com/track/6fH7xtXTxo8m8g2NnnyHIC?si=3cdfcf2a378f4500",
     },
     {
       name: "What I Know",
       source: "https://storage.googleapis.com/subroutinesongs/whatiknow.mp3",
       image: "/songs/whatiknow.jpg",
+      link: "https://open.spotify.com/track/5YvUQRKmwuidzCgX3Fmyl7?si=93bdf31a63c24820",
     },
 
     {
@@ -46,11 +48,13 @@ function Songlist() {
       name: "Machine - Side 1",
       source: "https://storage.googleapis.com/subroutinesongs/machineside1.mp3",
       image: "/songs/machine_album.gif",
+      link: "https://open.spotify.com/track/4Sb9Tmw1EjPJUwMpC09PaD?si=3d69c9d310ce4aaa",
     },
     {
       name: "Machine - Side 2",
       source: "https://storage.googleapis.com/subroutinesongs/machineside2.mp3",
       image: "/songs/machine_album.gif",
+      link: "https://open.spotify.com/track/7wtKEK4x8X5dLJd5L4uH14?si=67902ca749e445cc",
     },
   ];
   return (
