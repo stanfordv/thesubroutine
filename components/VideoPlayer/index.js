@@ -51,8 +51,7 @@ function VideoPlayer({ videos }) {
             backgroundColor: "rgba(0, 33, 71, 0.75)",
           },
           content: {
-            background: "black", // Set the background color of the content area
-            color: "var(--color-light)", // Set the color of any text in the content area
+            background: "black",
           },
         }}
         contentLabel="Example Modal"
