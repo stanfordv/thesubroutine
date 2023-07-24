@@ -1,75 +1,94 @@
-    .videoplayercontainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 3rem auto;
-    }
-    
-    .video_container {
-        display: flex;
-        justify-content: space-between;
-        background-color: var(--color-uppermiddle);
-        border: solid 2px var(--color-dark);
-        border-radius: 8px;
-        box-shadow: 8px 8px 8px 3px rgba(0, 0, 0, 0.2);
-        padding: 12px 25px 25px 25px;
-        width: 650px;
-        margin-bottom: 30px;
-    }
-    
-    .video_left {
-        width: 50%;
-    }
-    
-    .video_right {
-        margin-top: 30px;
-        width: 50%;
-    }
-    
-    .video_title {
-        font-size: 16px;
-        font-weight: bold;
-        color: var(--color-light);
-        margin-bottom: 5px;
-    }
-    
-    .video_text {
-        font-size: 12px;
-        color: var(--color-light)
-    }
-    
-    .video_img {
-        width: 250px;
-        height: auto;
-        border: solid 1px var(--color-bluegrey);
-        border-radius: 5px;
-        box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
-        margin-bottom: 10px;
-    }
-    
-    .row {
-        margin-bottom: 2rem;
-    }
-    
-    .col {
-        padding-right: 2rem;
-    }
-    
-    @media only screen and (min-device-width: 200px) and (max-device-width: 844px) and (-webkit-min-device-pixel-ratio: 2) {
         .videoplayercontainer {
-            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 3rem auto;
         }
+        
         .video_container {
-            display: block;
-            width: 300px;
-            height: 400px;
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--color-uppermiddle);
+            border: solid 2px var(--color-dark);
+            border-radius: 8px;
+            box-shadow: 8px 8px 8px 3px rgba(0, 0, 0, 0.2);
+            padding: 12px 25px 25px 25px;
+            width: 650px;
+            margin-bottom: 30px;
         }
+        
         .video_left {
-            width: 100%;
+            width: 50%;
         }
+        
         .video_right {
             margin-top: 30px;
-            width: 100%;
+            width: 50%;
         }
-    }
+        
+        .video_title {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--color-light);
+            margin-bottom: 5px;
+        }
+        
+        .video_text {
+            font-size: 12px;
+            color: var(--color-light)
+        }
+        
+        .video_img {
+            width: 250px;
+            height: auto;
+            border: solid 1px var(--color-bluegrey);
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .row {
+            margin-bottom: 2rem;
+        }
+        
+        .col {
+            padding-right: 2rem;
+        }
+        
+        .videoModal .overlay {
+            background-color: black
+        }
+        
+        .videoModal .content {
+            color: var(--color-light)
+        }
+        
+        .closebtn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        
+        @media only screen and (min-device-width: 200px) and (max-device-width: 844px) and (-webkit-min-device-pixel-ratio: 2) {
+            .videoplayercontainer {
+                margin: 2rem auto;
+            }
+            .video_container {
+                display: block;
+                width: 300px;
+                height: 400px;
+            }
+            .video_left {
+                width: 100%;
+            }
+            .video_right {
+                margin-top: 30px;
+                width: 100%;
+            }
+        }
