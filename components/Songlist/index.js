@@ -10,7 +10,7 @@ function Songlist() {
       image: "/songs/latestsketch.png",
     },
     {
-      name: "The Machine ",
+      name: "The Machine",
       source: "https://storage.googleapis.com/subroutinesongs/themachine.mp3",
       image: "/songs/themachine.jpg",
     },
@@ -29,7 +29,7 @@ function Songlist() {
     },
 
     {
-      name: "Busted ",
+      name: "Busted",
       source: "https://storage.googleapis.com/subroutinesongs/busted.mp3",
       image: "/songs/busted.jpg",
     },

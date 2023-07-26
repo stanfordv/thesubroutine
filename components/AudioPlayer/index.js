@@ -137,7 +137,7 @@ const AudioPlayer = ({ songs }) => {
         </div>
       </Col>
       <Col className={styles.playercol}>
-        <div className={styles.playerheader}>
+        <div className={styles.playertop}>
           <Controls
             isPlaying={isPlaying}
             play={play}
@@ -145,8 +145,10 @@ const AudioPlayer = ({ songs }) => {
             fastForward={fastForward}
             rewind={rewind}
           />
-          <div className={styles.displaytext}>
-            <DisplayTrack track={songs[currentTrackIndex]} />{" "}
+          <div className={styles.playerheader}>
+            <div className={styles.displaytext}>
+              <DisplayTrack track={songs[currentTrackIndex]} />{" "}
+            </div>
           </div>
         </div>
         <ProgressBar
