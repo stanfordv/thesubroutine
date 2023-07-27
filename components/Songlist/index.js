@@ -54,6 +54,11 @@ function Songlist() {
       source: "https://storage.googleapis.com/subroutinesongs/sunrise.mp3",
       image: "/songs/sunrise.jpg",
     },
+    {
+      name: "Looking up High",
+      source: "https://storage.googleapis.com/subroutinesongs/lookinuphigh.mp3",
+      image: "/songs/lookinuphigh.png",
+    },
   ];
   return (
     <div className={styles.audioplayer_container}>

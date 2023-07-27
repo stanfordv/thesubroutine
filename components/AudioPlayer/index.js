@@ -136,6 +136,7 @@ const AudioPlayer = ({ songs }) => {
           })}
         </div>
       </Col>
+
       <Col className={styles.playercol}>
         <div className={styles.playertop}>
           <Controls

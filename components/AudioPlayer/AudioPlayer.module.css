@@ -49,6 +49,9 @@
 .songlist {
     padding-top: 10px;
     border-top: dotted 1px var(--color-light);
+    overflow-y: auto;
+    max-height: 240px;
+    /* You can adjust this value according to your needs */
 }
 
 .songListItem span {
