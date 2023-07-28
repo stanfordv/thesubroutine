@@ -4,7 +4,7 @@ import styles from "@/components/AudioPlayer/AudioPlayer.module.css";
 function Songlist() {
   const songs = [
     {
-      name: "Latest mix",
+      name: "Latest mix (28/7)",
       source:
         "https://storage.googleapis.com/subroutinesongs/latest/sketch.mp3",
       image: "/songs/latestsketch.png",
@@ -33,6 +33,11 @@ function Songlist() {
       source: "https://storage.googleapis.com/subroutinesongs/whatiknow.mp3",
       image: "/songs/whatiknow.jpg",
       link: "https://open.spotify.com/track/5YvUQRKmwuidzCgX3Fmyl7?si=93bdf31a63c24820",
+    },
+    {
+      name: "How to Say This",
+      source: "https://storage.googleapis.com/subroutinesongs/howtosaythis.mp3",
+      image: "/songs/howtosaythis.png",
     },
     {
       name: "The Machine",
