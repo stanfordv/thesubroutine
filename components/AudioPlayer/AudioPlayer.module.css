@@ -185,6 +185,37 @@
     text-decoration: underline;
 }
 
+.infoButton {
+    background: none;
+    /* Remove default button background */
+    border: none;
+    /* Remove default button border */
+    cursor: pointer;
+    /* Show pointer cursor when hovering over the button */
+    outline: none;
+    /* Remove focus outline */
+    color: white;
+    /* Make the icon color inherit from its parent */
+}
+
+.infoButton:hover,
+.infoButton:focus {
+    color: red;
+    background: none;
+    /* Remove default button background */
+    border: none;
+    /* Remove default button border */
+    cursor: pointer;
+    /* Show pointer cursor when hovering over the button */
+    outline: none;
+    /* Remove focus outline */
+    color: white;
+}
+
+.infoButton:active {
+    color: your_active_color;
+}
+
 @media only screen and (min-device-width: 200px) and (max-device-width: 844px) and (-webkit-min-device-pixel-ratio: 2) {
     .audioplayer_container {
         display: flex;

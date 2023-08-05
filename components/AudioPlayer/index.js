@@ -4,14 +4,17 @@ import { Col, Row } from "reactstrap";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faPlay,
   faPause,
   faCirclePlay,
   faBackward,
   faForward,
+  faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
+import Tooltip from "../Tooltip";
 
 const AudioPlayer = ({ songs }) => {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
@@ -131,6 +134,13 @@ const AudioPlayer = ({ songs }) => {
                 )}
                 &nbsp;
                 <span>{song.name}</span>
+                {song.description && (
+                  <Tooltip content={song.description}>
+                    <button className={styles.infoButton}>
+                      <FontAwesomeIcon icon={faInfoCircle} />
+                    </button>
+                  </Tooltip>
+                )}
               </div>
             );
           })}
