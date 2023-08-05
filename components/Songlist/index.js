@@ -4,7 +4,7 @@ import styles from "@/components/AudioPlayer/AudioPlayer.module.css";
 function Songlist() {
   const songs = [
     {
-      name: "Latest mix (28/7)",
+      name: "Latest mix (5Aug)",
       source:
         "https://storage.googleapis.com/subroutinesongs/latest/sketch.mp3",
       image: "/songs/latestsketch.png",
