@@ -27,17 +27,37 @@ const AudioPlayer = ({ songs }) => {
   let nowplaying_image = songs[currentTrackIndex].image;
   let nowplaying_link = songs[currentTrackIndex].link;
   let nowplaying_name = songs[currentTrackIndex].name;
+
   useEffect(() => {
     audio.current = new Audio(songs[0].source);
     audio.current.addEventListener("timeupdate", updateProgress);
     audio.current.addEventListener("loadedmetadata", updateDuration);
+    audio.current.addEventListener("ended", nextTrack); // listen for 'ended' event
 
     return () => {
       audio.current.removeEventListener("timeupdate", updateProgress);
       audio.current.removeEventListener("loadedmetadata", updateDuration);
+      audio.current.removeEventListener("ended", nextTrack); // clean up listener
       audio.current = null;
     };
   }, [songs]);
+
+  const nextTrack = () => {
+    const newIndex =
+      currentTrackIndex + 1 < songs.length ? currentTrackIndex + 1 : 0;
+    changeTrack(newIndex);
+  };
+
+  const changeTrack = (index) => {
+    // Before changing the source, pause the current audio and clear the source
+    audio.current.pause();
+    audio.current.src = "";
+
+    // Then set the new source and start playing
+    audio.current.src = songs[index].source;
+    setCurrentTrackIndex(index);
+    play();
+  };
 
   useEffect(() => {
     const handleRouteChange = () => {
@@ -78,17 +98,6 @@ const AudioPlayer = ({ songs }) => {
 
   const updateDuration = () => {
     setDuration(audio.current.duration);
-  };
-
-  const changeTrack = (index) => {
-    // Before changing the source, pause the current audio and clear the source
-    audio.current.pause();
-    audio.current.src = "";
-
-    // Then set the new source and start playing
-    audio.current.src = songs[index].source;
-    setCurrentTrackIndex(index);
-    play();
   };
 
   const play = () => {
