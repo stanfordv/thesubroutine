@@ -37,11 +37,6 @@ function Songlist() {
       link: "https://open.spotify.com/track/5YvUQRKmwuidzCgX3Fmyl7?si=93bdf31a63c24820",
     },
     {
-      name: "How to Say This",
-      source: "https://storage.googleapis.com/subroutinesongs/howtosaythis.mp3",
-      image: "/songs/howtosaythis.png",
-    },
-    {
       name: "The Machine",
       source: "https://storage.googleapis.com/subroutinesongs/themachine.mp3",
       image: "/songs/themachine.jpg",

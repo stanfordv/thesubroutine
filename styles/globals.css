@@ -1,17 +1,26 @@
 :root {
-    --color-dark: #000000;
+    --color-dark: black;
+    --color-wornleather: #8B6B55;
+    --color-darkish: #1B1D21;
     /* Black */
-    --color-light: #BDB76B;
+    --color-light: #F2F2F2;
+    --color-lightish: #BDB76B;
     /* Desert Sand */
-    --color-uppermiddle: #002147;
-    /* Army Green */
-    --color-bluegrey: #6A994E;
-    /* Slate Gray */
-    --color-dustyorange: #CB4154;
+    --color-rustyred: #D64A45;
+    /* Rusty Red */
+    --color-uppermiddle: #7BA273;
+    /* Muted Green:*/
+    --color-bluegrey: #4A6D8C;
+    /* Steel Blue*/
+    --color-dustyorange: #F8966E;
+    --color-desertsand: #EFCB68;
     /* Copper */
-    --color-darkgrey: #35281E;
+    --color-darkgrey: #595D5F;
+    /* Slate Gray:*/
+    --color-wornleather: #8B6B55;
+    --color-fadedplumb: #6A5160;
     height: 100vh;
-    background-color: var( --color-darkgrey);
+    background-color: var( --color-fadedplumb);
 }
 
 @font-face {

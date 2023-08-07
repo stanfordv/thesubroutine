@@ -15,7 +15,7 @@
     min-width: 880px;
     max-width: 880px;
     box-shadow: 10px 10px 20px 4px rgba(0, 0, 0, 0.2);
-    background: var(--color-uppermiddle);
+    background: var(--color-darkish);
 }
 
 .subroutinebomb {
@@ -35,7 +35,7 @@
 .songlistheader {
     height: 45px;
     position: relative;
-    color: var(--color-bluegrey);
+    color: var(--color-desertsand);
 }
 
 .songlistheaderinner {
@@ -56,7 +56,7 @@
 
 .songListItem span {
     cursor: pointer;
-    color: var(--color-bluegrey);
+    color: var(--color-desertsand);
     opacity: 0.7;
 }
 
@@ -77,9 +77,9 @@
     background: var(--color-dark);
     border-radius: 7px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), /* Bottom right shadow */
-    -3px -3px 10px rgba(255, 255, 255, 1), /* Top left shadow */
+    -3px -3px 10px rgba(0, 0, 0, 1), /* Top left shadow */
     -3px 3px 10px rgba(0, 0, 0, 0.5), /* Bottom left shadow */
-    3px -3px 10px rgba(255, 255, 255, 0.5);
+    3px -3px 10px rgba(0, 0, 0, 0.5);
     /* Top right shadow */
 }
 
@@ -93,9 +93,9 @@
     height: auto;
     margin-top: 25px;
     margin-bottom: 20px;
-    border: solid 1px var(--color-light);
+    border: solid 1px var(--color-bluegrey);
     border-radius: 5px;
-    box-shadow: 5px 5px 5px rgba(218, 145, 0, 0.5);
+    /* box-shadow: 5px 5px 5px rgba(218, 145, 0, 0.5); */
 }
 
 .playertop {
@@ -129,7 +129,7 @@
 }
 
 .controlbtns .pausebtn {
-    color: var(--color-dustyorange);
+    color: var(--color-rustyred);
 }
 
 .displaytext {
@@ -159,7 +159,7 @@
 .fastForwardbtn {
     position: absolute;
     z-index: 10;
-    color: var(--color-light);
+    color: var(--color-wornleather);
     cursor: pointer;
 }
 
@@ -194,13 +194,13 @@
     /* Show pointer cursor when hovering over the button */
     outline: none;
     /* Remove focus outline */
-    color: white;
+    color: var(--color-light);
     /* Make the icon color inherit from its parent */
 }
 
 .infoButton:hover,
 .infoButton:focus {
-    color: red;
+    color: var(--color-rustyred);
     background: none;
     /* Remove default button background */
     border: none;
@@ -209,7 +209,7 @@
     /* Show pointer cursor when hovering over the button */
     outline: none;
     /* Remove focus outline */
-    color: white;
+    color: var(--color-light);
 }
 
 .infoButton:active {
