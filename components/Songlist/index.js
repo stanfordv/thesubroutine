@@ -4,12 +4,13 @@ import styles from "@/components/AudioPlayer/AudioPlayer.module.css";
 function Songlist() {
   const songs = [
     {
-      name: "Latest mix (5Aug)",
+      name: "Latest mix (11Aug)",
       source:
         "https://storage.googleapis.com/subroutinesongs/latest/sketch.mp3",
       image: "/songs/latestsketch.png",
       description:
-        "This is the full version of the Subroutine theme song aka thesubroutine19final - july23_full - notwang_1_master. There is an attempt at mastering here and we removed the clav twang for better or for worse.",
+        "This is full version of the Subroutine theme song with techno outro - aug23_3_shortsolo_longout",
+      //  AUG05: "This is the full version of the Subroutine theme song aka thesubroutine19final - july23_full - notwang_1_master. There is an attempt at mastering here and we removed the clav twang for better or for worse.",
     },
     {
       name: "Machine - Side 1",
