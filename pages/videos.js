@@ -29,6 +29,14 @@ export default () => {
       // "Lorem ipsum dolor sit amet, aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
+      name: "Being Here",
+      youtube_link: "https://www.youtube.com/watch?v=m4ldiVdBheU",
+      source: "https://www.youtube.com/embed/m4ldiVdBheU",
+      image: "/videos/beingherethumb.png",
+      description: "",
+      // "Lorem ipsum dolor sit amet, aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+    {
       name: "Sway",
       youtube_link: "https://www.youtube.com/watch?v=KHSBaBe5X5g",
       source: "https://www.youtube.com/embed/KHSBaBe5X5g",
