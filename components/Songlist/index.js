@@ -9,7 +9,7 @@ function Songlist() {
         "https://storage.googleapis.com/subroutinesongs/latest/sketch.mp3",
       image: "/songs/latestsketch.png",
       description:
-        "This is the latest version of The Chain. Reduced complexity.",
+        "This is the latest version of The Chain. Reduced complexity. aka. chainV2_23_ready to upload",
       // Aug18: "This is full version of the Subroutine theme song with techno outro - aug23_4_clean_03",
       //  AUG05: "This is the full version of the Subroutine theme song aka thesubroutine19final - july23_full - notwang_1_master. There is an attempt at mastering here and we removed the clav twang for better or for worse.",
     },
