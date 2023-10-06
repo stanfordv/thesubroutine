@@ -69,6 +69,11 @@ function Songlist() {
       source: "https://storage.googleapis.com/subroutinesongs/lookinuphigh.mp3",
       image: "/songs/lookinuphigh.png",
     },
+    {
+      name: "Being Here",
+      source: "https://storage.googleapis.com/subroutinesongs/beinghere.mp3",
+      image: "/songs/beinghere.png",
+    },
   ];
   return (
     <div className={styles.audioplayer_container}>
